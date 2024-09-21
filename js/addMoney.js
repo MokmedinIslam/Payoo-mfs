@@ -29,7 +29,7 @@ document.getElementById('btn-add-money')
 
         if(pinNumber === '123'){
             // add money to the account
-            const balance =document.getElementById('account-balance').innerText;
+            const balance = document.getElementById('account-balance').innerText;
             const balanceNumber = parseFloat(balance);
             
             // new balance
