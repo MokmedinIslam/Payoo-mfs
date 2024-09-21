@@ -3,6 +3,9 @@
  * s-1: add event handler
  * prevent page reload after form submit
  * s-2: get money to be added to the account balance
+ * get the pin number
+ * 
+ * s-3: verify the pin number
  */
 
 // step-1: add an event handler to the add money button inside the form
@@ -14,9 +17,33 @@ document.getElementById('btn-add-money')
 
         // step-2: get money to be added to the account
         const addMoneyInput = document.getElementById('input-add-money').value;
-        console.log(addMoneyInput);
+        console.log(typeof addMoneyInput);
 
         // get the pin number provide
         const pinNumberInput = document.getElementById('input-pin-number').value;
         console.log(pinNumberInput);
+
+        // step-3: verify pin number
+        // wrong way to validate pin number
+        if(pinNumberInput === '123'){
+            console.log('adding money to your account');
+
+            // step-4: get the current balance
+            const balance = document.getElementById('account-balance').innerText;
+            console.log(typeof balance);
+
+            // step-5: add addMoneyInput with balance
+            const moneyNumber = parseFloat(addMoneyInput);
+            console.log(typeof moneyNumber);
+            const balanceNumber = parseFloat(balance);
+            console.log(typeof balanceNumber)
+            const newBalance = moneyNumber + balanceNumber ;
+            console.log(newBalance);
+
+            // step-6: update the balance in the UI/DOM
+            document.getElementById('account-balance').innerText = newBalance;
+        }
+        else{
+            alert('Failed to add money! Please try again')
+        }
     });
