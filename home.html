@@ -31,7 +31,7 @@
                   </div>
                   <div class="divider"></div>
                   <!-- add money from start -->
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -51,10 +51,32 @@
                     </form>
                   </div>
                    <!-- add money from end -->
+                    <!-- cash out from start -->
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span  class="label-text">Amount</span>
+                            </label>
+                            <input id="input-add-money" type="text" placeholder="Amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin</span>
+                            </label>
+                            <input id="input-pin-number" type="password" placeholder="pin Number" class="input input-bordered" autocomplete="off" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+                          </div>
+                        </form>
+                      </div>
+                     <!-- cash out from end -->
               </div>
             </div>
           </div>
     </main>
-    <script src="js/home.js"></script>
+    <!-- <script src="js/home.js"></script> -->
+     <script src="js/addMoney.js"></script>
 </body>
 </html>
